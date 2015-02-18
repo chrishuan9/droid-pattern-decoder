@@ -1,4 +1,4 @@
-#H1 Android Pattern Lock Decoder
+#Android Pattern Lock Decoder
 
 Pattern unlock on Android is entered by joining at least four points on a 3x3 matrix. Each
 point can only be used once and the maximum number of points is nine. Android, internally
@@ -29,7 +29,7 @@ devices recovery is not possible without rooting the device.
 Copy the gesture.key file from `/data/system/gesture.key` to `/sdcard/` and pull the file
 from the device using `adb pull /sdcard/gesture.key .`
 
-To view the content use the od dump tool (Example file in [res/gesture.key](../blob/master/res/gesture.key))
+To view the content use the od dump tool (Example file in [res/gesture.key](../master/res/gesture.key))
 
 ```
 $ od -t x1 < res/gesture.key 
