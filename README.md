@@ -28,7 +28,7 @@ devices recovery is not possible without rooting the device.
 
 Example below uses the following pattern lock:
 
-![Pattern-Lock](https://github.com/cvarta/droid-pattern-decoder/raw/master/res/img/device-2015-02-18-234613.png)
+![Pattern-Lock](https://git.yereaztian.ch/chris/droid-pattern-decoder/blob/master/res/img/device-2015-02-18-234613.png)
 
 Copy the gesture.key file from `/data/system/gesture.key` to `/sdcard/` and pull the file
 from the device using `adb pull /sdcard/gesture.key .`
