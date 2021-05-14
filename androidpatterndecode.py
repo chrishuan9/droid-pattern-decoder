@@ -55,7 +55,7 @@ def match_pattern(dictionary="", sha1hash=""):
 def parse_opt():
     # Create a option parser
     
-    parser = OptionParser("python3 %prog -g <gesture.key> -d <dictionary file containing sha1 hashs>.\n\rThis program is used to recover android's pattern passowrd.")
+    parser = OptionParser("python3 %prog -g <gesture.key> -d <dictionary file containing sha1 hashs>.\n\rThis program is used to recover android's pattern password.")
     
     # Add options
     

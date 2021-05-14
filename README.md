@@ -1,7 +1,8 @@
 # Android Pattern Lock Decoder
 
-Pattern unlock on Android is entered by joining at least four points on a 3x3 matrix. Each point can only be used once and the maximum number of points is nine. Android, internally stores the pattern as a byte sequence. Each point is mapped to its index, where 0 represents the top left point and 8 the bottom right one on the matrix. Thus the pattern is similar
-to a PIN Lock with a minimum of four and and a maximum of nine digits but which only use nine distinctive digits (0 to 8). Because points cannot be repeated in the pattern and certain combinations are not possible (e.g. directly connecting 1 to 9), the number of variations in an unlock pattern is considerably lower compared to those of a nine-digit PIN.
+Pattern unlock on Android is entered by joining at least four points on a 3x3 matrix. Each point can only be used once and the maximum number of points is nine. Android, internally stores the pattern as a byte sequence. 
+
+Each point is mapped to its index, where 0 represents the top left point and 8 the bottom right one on the matrix. Thus the pattern is similar to a PIN Lock with a minimum of four and and a maximum of nine digits but which only use nine distinctive digits (0 to 8). Because points cannot be repeated in the pattern and certain combinations are not possible (e.g. directly connecting 1 to 9), the number of variations in an unlock pattern is considerably lower compared to those of a nine-digit PIN.
 
 The Sha-1 hash of a pattern lock is stored in 
 ```
@@ -18,7 +19,8 @@ is owned by the system user and its default permissions are set to `0600` so on 
 
 ```bash
 Usage: python3 androidpatterndecode.py -g <gesture.key> -d <dictionary file containing sha1 hashs>.
-This program is used to recover android's pattern passowrd.
+
+This program is used to recover android's pattern password.
 
 Options:
   -h, --help            show this help message and exit
@@ -46,7 +48,7 @@ $ od -t x1 < res/gesture.key
 0000024
 ```
 
-To lookup the pattern use the [androidpatterendecode.py](./androidpatterendecode.py) python script with the provided hash table:
+To retrieve the pattern from the `gesture.key` file, use the [androidpatterndecode.py](./androidpatterndecode.py) a python script by providing a hash table:
 
 ```bash
 $ python3 androidpatterndecode.py -g res/gesture.key -d res/androidpatternsha1.txt
